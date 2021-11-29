@@ -1,0 +1,22 @@
+#first_section {
+  grid-column: 1/4;
+  width: 100%;
+  min-height: 100vh;
+  text-align: left;
+  background-image: url(splash-rikke.jpg);
+  background-size: cover;
+  background-position: 60% 25%;
+}
+
+@media (min-width: 500px) {
+  #second_section .section_wrapper {
+    display: grid;
+    gap: 60px;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  #second_section .col_wide {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}
