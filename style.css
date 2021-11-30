@@ -1,22 +1,107 @@
+main {
+  display: grid;
+  grid-template-columns: 1fr minmax(0, 1200px) 1fr;
+  margin: 5px;
+  padding: 5px;
+}
+
+main section {
+  grid-column: 2/3;
+}
+
+body {
+  background-color: white;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: lightblue;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 90px;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: darkblue;
+}
+
 #first_section {
   grid-column: 1/4;
   width: 100%;
   min-height: 100vh;
   text-align: left;
-  background-image: url(splash-rikke.jpg);
+  background-image: url(bilder/splash.jpg);
   background-size: cover;
   background-position: 60% 25%;
 }
 
-@media (min-width: 500px) {
+@media (orientation: portrait) and (min-width: 500px) {
+  #first_section {
+    height: auto;
+  }
+}
+
+@media (min-width: 600px) {
   #second_section .section_wrapper {
+    display: grid;
+    grid-column-gap: 20px;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    padding: 20px;
+  }
+}
+
+@media (min-width: 500px) {
+  #third_section .section_wrapper {
     display: grid;
     gap: 60px;
     grid-template-columns: 1fr 1fr 1fr;
   }
-  #second_section .col_wide {
+  #third_section .col_wide {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
   }
+}
+
+video {
+  width: 100%;
+  height: auto;
+}
+
+iframe {
+  width: 100%;
+  height: auto;
+}
+
+img {
+  max-width: 100%;
+}
+
+h1 {
+  color: #ccddff;
+  font-size: 90px;
+  text-align: center;
+}
+
+p {
+  font-size: 17px;
+  line-height: 1.4;
 }
